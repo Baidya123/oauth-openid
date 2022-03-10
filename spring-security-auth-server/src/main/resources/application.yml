@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    #    username: root
+    username: biswajit_oauth
+    #    url: jdbc:mysql://localhost:3306/test
+    url: jdbc:sqlserver://sql.bsite.net\MSSQL2016;databaseName=biswajit_oauth
+    #    password:
+    password: 123456
+  jpa:
+    properties:
+      hibernate:
+        #        dialect: org.hibernate.dialect.MySQL5Dialect
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    show-sql: true
+security:
+  basic:
+    enable: false
+server:
+  context-path: /auth
+  port: 8081
